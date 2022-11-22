@@ -31,8 +31,6 @@ const images = [
     } 
 ];
 
-
-
 // post array items
 images.forEach((proprieta) => {
     // List array items
@@ -73,21 +71,6 @@ images.forEach((proprieta) => {
     child2.appendChild(thumbContainer)
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // variable for counting the active image
 var activeImg = 0;
