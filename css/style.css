@@ -3,3 +3,112 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(309deg, #000000, #1f1f1f, #000000);
+    background-size: 600% 600%;
+
+    animation: fuzzbizz 6s ease infinite;
+}
+
+    @keyframes fuzzbizz {
+        0%{background-position:34% 0%}
+        50%{background-position:67% 100%}
+        100%{background-position:34% 0%}
+    }
+
+    .button{
+        width: auto;
+        padding: 5px 10px;
+        margin: 20px 0;
+        font-size: 30px;
+        background-color: rgba(189, 189, 189, 0.46);
+        text-align: center;
+        border-radius: 50%;
+    }
+
+        .button:hover{
+            outline: #007ee5 3px solid;
+            background-color: rgba(138, 138, 138, 0.48);
+        }
+
+    .main_container{
+        display: flex;
+    }
+
+        #image_carousel{
+            width: 1000px;
+            height: 600px;
+            border: rgba(181, 181, 181, 0.623) 1px solid;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+            .carousel_item{
+                width: 1000px;
+                height: 600px;
+                position: absolute;
+                display: none;
+                position: relative;
+            }
+
+            .title{
+                position: absolute;
+                top: 10px;
+                color: #fff;
+
+            }
+
+            .subtitle{
+                position: absolute;
+                top: 0;
+                color: #fff;
+
+            }
+
+                .active{
+                    display: block;
+                }
+
+                .display_none{
+                    display: none;
+                }
+        
+        #thumbnails{
+            width: 300px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 20px;
+        }
+
+            .thumb{
+                border-radius: 15px;
+                overflow: hidden;
+                width: 300px;
+                height: calc((600px - 50px) / 5);
+                filter: grayscale();
+                border: rgba(255, 255, 255, 0.421) 1px solid;
+            }
+
+                .thumb_active{
+                    filter: none;
+                    border: white 1px solid;
+                    box-shadow:0px 0px 40px 1px #ffffff6e ;
+                }
+
